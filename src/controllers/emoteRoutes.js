@@ -28,4 +28,17 @@ router.delete('/:id', (req, res) => {
         });
 });
 
+// update emote data by id
+router.patch('/:id', (req, res) => {
+    const id = req.params.id;
+    const data = req.body;
+
+    Emote.findByIdAndUpdate(id, data, {
+        new: true
+    })
+        .then((emote) => {
+            res.json(emote);
+        });
+});
+
 module.exports = router;
