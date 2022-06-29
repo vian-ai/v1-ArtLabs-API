@@ -24,7 +24,7 @@ router.post('/', (req, res) => {
 router.delete('/:id', (req, res) => {
     Banner.findByIdAndDelete(req.params.id)
         .then((banner) => {
-            res.json(banner)
+            res.json(banner);
         });
 });
 
@@ -37,7 +37,7 @@ router.patch('/:id', (req, res) => {
         new: true
     })
         .then((banner) => {
-            res.json(banner)
+            res.json(banner);
         });
 });
 

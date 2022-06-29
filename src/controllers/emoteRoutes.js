@@ -20,4 +20,12 @@ router.post('/', (req, res) => {
         });
 });
 
+// delete emote data by id
+router.delete('/:id', (req, res) => {
+    Emote.findByIdAndDelete(req.params.id)
+        .then((emote) => {
+            res.json(emote);
+        });
+});
+
 module.exports = router;
