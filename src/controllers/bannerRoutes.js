@@ -28,4 +28,17 @@ router.delete('/:id', (req, res) => {
         });
 });
 
+// update data by id
+router.patch('/:id', (req, res) => {
+    const id = req.params.id;
+    const data = req.body;
+
+    Banner.findByIdAndUpdate(id, data, {
+        new: true
+    })
+        .then((banner) => {
+            res.json(banner)
+        });
+});
+
 module.exports = router;
