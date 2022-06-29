@@ -8,7 +8,7 @@ const cors = require('cors');
 // importing routes
 const bannerRoute = require('./controllers/bannerRoutes');
 const emoteRoute = require('./controllers/emoteRoutes');
-// const logoRoute = require('./controllers/logoRoutes');
+const logoRoute = require('./controllers/logoRoutes');
 
 // define PORT
 const PORT = process.env.PORT;
@@ -23,7 +23,7 @@ app.use(cors());
 // app routes
 app.use('/banners/', bannerRoute);
 app.use('/emotes/', emoteRoute);
-// app.use('/logos/', logoRoute);
+app.use('/logos/', logoRoute);
 
 // starting app on port
 app.listen(PORT, () => {
