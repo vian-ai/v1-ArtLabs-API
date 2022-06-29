@@ -12,4 +12,12 @@ router.get('/', (req, res) => {
         });
 });
 
+// create new emote data
+router.post('/', (req, res) => {
+    Emote.create(req.body)
+        .then((emote) => {
+            res.json(emote);
+        });
+});
+
 module.exports = router;
