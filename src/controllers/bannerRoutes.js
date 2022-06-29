@@ -20,4 +20,12 @@ router.post('/', (req, res) => {
         });
 });
 
+// delete data by id
+router.delete('/:id', (req, res) => {
+    Banner.findByIdAndDelete(req.params.id)
+        .then((banner) => {
+            res.json(banner)
+        });
+});
+
 module.exports = router;
