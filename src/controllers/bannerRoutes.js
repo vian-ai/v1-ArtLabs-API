@@ -12,4 +12,12 @@ router.get('/', (req, res) => {
         });
 });
 
+// create new data
+router.post('/', (req, res) => {
+    Banner.create(req.body)
+        .then((banner) => {
+            res.json(banner);
+        });
+});
+
 module.exports = router;
