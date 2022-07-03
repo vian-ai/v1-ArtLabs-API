@@ -8,7 +8,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
     Logo.find({})
         .then((logos) => {
-            res.json(emotes);
+            res.json(logos);
         });
 });
 
