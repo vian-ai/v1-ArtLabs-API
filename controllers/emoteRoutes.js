@@ -1,6 +1,6 @@
 // require dependencies
 const express = require('express');
-const Emote = require('../models/logoSchema');
+const Emote = require('../models/emoteSchema');
 
 const router = express.Router();
 
